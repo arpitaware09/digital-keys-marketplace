@@ -10,6 +10,9 @@ const api = axios.create({
   withCredentials: false // Set to false to avoid CORS issues with credentials
 });
 
+// Log the base URL for debugging
+console.log('API Base URL:', API_URL.replace('/api', ''));
+
 // Add a request interceptor to include the token in all requests
 api.interceptors.request.use(
   (config) => {
